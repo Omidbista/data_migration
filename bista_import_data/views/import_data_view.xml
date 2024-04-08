@@ -8,25 +8,43 @@
                 <header>
                     <button type="object" name="import_fields" string="Import Fields"/>
                     <button type="object" name="create_table" string="Create Table"/>
+                    <button type="object" name="access_right" string="Create Access Right"/>
+                    <button type="object" name="create_records" string="Create Records"/>
                     <button type="object" name="create_list_view" string="List View"/>
                 </header>
                 <sheet>
                     <div class="oe_button_box" name="button_box">
-                        <button type="object" name="view_records" string="View Records" icon="fa-pencil"/>
+                        <button type="object" name="view_records" string="View Records" icon="fa-pencil">
+                            <field name="record_count" widget="statinfo"/>
+                        </button>
                     </div>
                     <group>
-                        <field name="name"/>
-                        <field name="source"/>
-                        <field name="file_data" filename="file_name"/>
-                        <field name="file_name" invisible="1"/>
-                        <field name="field_ids">
-                            <tree>
-                                <field name="name"/>
-                                <field name="label"/>
-                                <field name="type"/>
-                            </tree>
-                        </field>
+                        <group>
+                            <field name="name"/>
+                            <field name="source"/>
+                            <field name="file_data" filename="file_name"/>
+                            <field name="file_name" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="model_id"/>
+                            <field name="view_id"/>
+                            <field name="access_id"/>
+                        </group>
                     </group>
+                    <notebook>
+                        <page string="Fields">
+                            <field name="field_ids">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="label"/>
+                                    <field name="type"/>
+                                    <field name="required" widget="boolean_toggle"/>
+                                    <field name="searchable" widget="boolean_toggle"/>
+                                    <field name="group_by" widget="boolean_toggle"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
