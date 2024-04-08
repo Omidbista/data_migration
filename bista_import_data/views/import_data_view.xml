@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="import_data_view_form" model="ir.ui.view">
+        <field name="name">import.data.view.form</field>
+        <field name="model">import.data</field>
+        <field name="arch" type="xml">
+            <form string="import_data_form">
+                <header>
+                    <button type="object" name="import_fields" string="Import Fields"/>
+                    <button type="object" name="create_table" string="Create Table"/>
+                    <button type="object" name="create_list_view" string="List View"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button type="object" name="view_records" string="View Records" icon="fa-pencil"/>
+                    </div>
+                    <group>
+                        <field name="name"/>
+                        <field name="source"/>
+                        <field name="file_data" filename="file_name"/>
+                        <field name="file_name" invisible="1"/>
+                        <field name="field_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="label"/>
+                                <field name="type"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="import_data_view_tree" model="ir.ui.view">
+        <field name="name">import.data.view.tree</field>
+        <field name="model">import.data</field>
+        <field name="arch" type="xml">
+            <tree string="import_data_tree">
+                <field name="name"/>
+                <field name="source"/>
+                <field name="file_data"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="import_data_action" model="ir.actions.act_window">
+        <field name="name">Import Data</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">import.data</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="data_migration_root" name="Data Migration" sequence="50"/>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="menu_import_data" name="Data Import" parent="data_migration_root" action="import_data_action"
+              sequence="1"/>
+</odoo>
