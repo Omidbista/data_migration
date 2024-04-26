@@ -1,0 +1,210 @@
+$primary: #1a9988;
+
+
+.main_layout {
+  background: lightgray;
+  min-height: 100%;
+  margin: 0 !important;
+
+  .action-btn-danger {
+    color: #e29898 !important;
+    background: none;
+    border: none;
+    outline: none;
+    display: none;
+  }
+
+  .field-section {
+    border-top: 5px solid lightgray;
+    padding: 10px 0;
+    margin: 10px 0;
+
+  }
+
+  select, input {
+    width: 100%;
+    border-bottom: 0 !important;
+  }
+
+  .o_group {
+    width: 100%;
+
+    .o_field_widget {
+      width: 100% !important;
+    }
+
+    .tr-invisible {
+      display: none;
+      margin-bottom: 0;
+
+    }
+
+    tr {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid lightgrey;
+      margin-bottom: 5px;
+
+      td {
+        min-width: auto !important;
+        width: 100% !important;
+        padding: 0 !important;;
+
+        label {
+          margin-bottom: 0;
+          font-size: 1.0rem;
+        }
+      }
+    }
+  }
+
+  .field-draggable, .badge {
+    margin-bottom: 5px;
+    border-radius: 2px;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    z-index: 1 !important;
+    background-color: unset !important;
+
+    .field-value {
+      border: 1px solid lightgray;
+      padding: 3px 10px;
+      display: flex;
+      align-items: center;
+
+    }
+
+    .field-label {
+      padding: 0px;
+      align-items: center;
+    }
+
+    .fa {
+      padding: 5px 10px 5px 2px;
+    }
+  }
+
+  .ui-draggable-dragging {
+    border: 1px solid rgba(211, 211, 211, 0.24) !important;
+
+    h1, h2, h3, h4, h5, h6, p, span, div {
+      color: rgba(211, 211, 211, 0.24) !important;
+    }
+  }
+
+
+}
+
+.zpl-layout-left {
+  background: white;
+  padding: 20px;
+
+  .field-draggable-container {
+
+    .field-draggable {
+      .field-value {
+        width: 100%;
+      }
+
+      .field-label {
+        display: none;
+      }
+    }
+  }
+
+}
+
+.zpl-tools-container {
+  padding: 10px;
+  background: white;
+  border-bottom: 1px solid lightgrey;;
+  border-right: 1px solid lightgrey;;
+  border-left: 1px solid lightgrey;;
+}
+
+.zpl-layout-center {
+  padding: 20px;
+  position: relative;
+
+  // Global
+  .wrapper {
+    padding: 20px;
+    height: 100%;
+  }
+
+  .field-draggable {
+    width: fit-content !important;
+  }
+
+  .zpl-container {
+    min-height: 50%;
+    max-height: 100%;
+    width: 100%;
+    position: relative;
+
+    .zpl {
+      height: calc(100% - 30px) !important;
+      max-height: calc(100% - 30px) !important;
+      margin: 0 auto !important;
+      border: 1px dashed white;
+      display: block !important;
+
+
+    }
+  }
+
+  .zpl-blue-print {
+    background: #37456f;
+    color: white;
+
+
+    h1, h2, h3, h4, h5, h6, p, span, div {
+      color: white !important;;
+    }
+
+    .field-selected {
+      .action-btn {
+        display: block !important;
+      }
+    }
+
+    .zpl-blue {
+      border-color: white !important;
+      position: relative !important;
+    }
+  }
+
+  .zpl-preview {
+    width: 100%;
+    background: white;
+
+    .zpl-white {
+      border-color: #37456f !important;
+      display: flex;
+      width: fit-content;
+
+      .o_field_image, img {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+}
+
+.zpl-layout-right {
+  //height: 100vh;
+  background: white;
+  padding: 20px;
+
+  .field-config-container {
+
+    .btn-unlink-field {
+      margin-top: 15px;
+    }
+  }
+
+}
+
+

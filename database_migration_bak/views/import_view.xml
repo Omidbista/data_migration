@@ -1,0 +1,24 @@
+<odoo>
+    <record id="database_migration_import_view" model="ir.ui.view">
+        <field name="name">database_migration_import_view</field>
+        <field name="model">import.data</field>
+        <field name="arch" type="xml">
+            <import_view>
+                <div class="main_layout row">
+                    <div id="data_source_layout" class="col-md-12">
+                        <div class="title">
+                            <h3>Data Cleanup</h3>
+                            <p>Select data source and click continue</p>
+                            <h6>
+                                <group>
+                                    <field name="source" required="1"/>
+                                </group>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </import_view>
+        </field>
+    </record>
+
+</odoo>

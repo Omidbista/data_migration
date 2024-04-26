@@ -1,6 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_import_data,access_import_data,model_import_data,base.group_user,1,1,1,1
 access_import_data_fields,access_import_data_fields,model_import_data_fields,base.group_user,1,1,1,1
-access_data_sanitizer,access_data_sanitizer,model_data_sanitizer,base.group_user,1,1,1,1
-access_sanitizer_mapping,access_sanitizer_mapping,model_sanitizer_mapping,base.group_user,1,1,1,1
-

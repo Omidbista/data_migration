@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="import_data_view_form" model="ir.ui.view">
+        <field name="name">import.data.view.form</field>
+        <field name="model">import.data</field>
+        <field name="arch" type="xml">
+            <form string="import_data_form" js_class="ImportFormRenderer">
+                <header>
+                    <button type="object" states="draft" name="import_fields" string="Import Fields"
+                            class="oe_highlight"/>
+                    <button type="object" states="config_fields" name="validate" string="Validate"
+                            class="oe_highlight"/>
+                     <button type="object" states="config_fields" name="import_fields" string="Reimport Fields"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button type="object" states="ready" name="view_records"
+                                 icon="fa-pencil">
+                            <field name="record_count" string="Records" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name" attrs="{
+                                    'readonly': [('model_id','!=',False)],
+                                   }"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+
+                            <field name="source" attrs="{
+                                   'readonly': [('model_id','!=',False)],
+                                   }"/>
+                            <field name="file_data" filename="file_name"/>
+                            <field name="file_name" invisible="1"/>
+
+                        </group>
+                        <group states="ready">
+                            <field name="model_id" readonly="1"/>
+                            <field name="view_id" readonly="1"/>
+                            <field name="access_id" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Fields">
+                            <field name="field_ids">
+                                <tree create="False" delete="False">
+                                    <field name="name"/>
+                                    <field name="label"/>
+                                    <field name="type"/>
+                                    <field name="required" widget="boolean_toggle"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <widget name="MigrationHelper"/>
+            </form>
+        </field>
+    </record>
+
+    <record id="import_data_view_tree" model="ir.ui.view">
+        <field name="name">import.data.view.tree</field>
+        <field name="model">import.data</field>
+        <field name="arch" type="xml">
+            <tree string="import_data_tree">
+                <field name="name"/>
+                <field name="source"/>
+                <field name="file_data"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="import_data_action" model="ir.actions.act_window">
+        <field name="name">Import Data</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">import.data</field>
+        <field name="view_mode">import_list_view,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="data_migration_root" name="Data Migration" sequence="50"/>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="menu_import_data" name="Data Import" parent="data_migration_root" action="import_data_action"
+              sequence="1"/>
+</odoo>

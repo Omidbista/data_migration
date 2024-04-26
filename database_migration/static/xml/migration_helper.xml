@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="database_migration.migration_helper" owl="1">
+        <div class="migration_helper">
+          <div class="container">
+                <div class="row">
+                <div class="col-md-2">
+                    <h4>Tips!</h4>
+                    <p>Follow the instructions here</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!--        <label class="o_form_label" t-att-for="props.id" t-att-class="className" >-->
+        <!--            <t t-esc="props.string"/><sup class="text-info p-1" t-if="hasTooltip"-->
+        <!--                                          t-att="{'data-tooltip-template': 'web.FieldTooltip',-->
+        <!--                                          'data-tooltip-info': tooltipInfo,-->
+        <!--                                          'data-tooltip-touch-tap-to-show': 'true'}">?</sup>-->
+        <!--        </label>-->
+    </t>
+
+</templates>

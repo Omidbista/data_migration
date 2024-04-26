@@ -1,0 +1,68 @@
+.o_import_list_view {
+
+  th {
+
+    &:hover {
+
+      .fa-cog {
+        display: block;
+      }
+    }
+    .fa-cog {
+      position: relative;;
+      float: right;
+      padding-right: 10px;
+      padding-left: 10px;
+      cursor: pointer;
+      display: none;
+      transition: 0.5s all;
+    }
+
+  }
+
+  .field_warning {
+    display: inline;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+
+    .o_optional_columns_dropdown_toggle {
+      display: none;
+    }
+
+    &:hover {
+      table {
+        display: block;
+        position: absolute;;
+      }
+
+    }
+
+    .fa {
+      color: rgba(193, 90, 90, 0.77);
+    }
+
+    table {
+      display: none;
+      transition: 0.5s all;
+      position: absolute;
+      background: white;
+      width: max-content;
+      top: 20px;
+      left: 20px;
+      border: 2px solid lightgrey;
+      z-index: 1000;
+
+
+      th {
+        background: lightgray;
+      }
+
+      td, th {
+        padding: 5px;
+      }
+    }
+
+
+  }
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="data_sanitizer_form" model="ir.ui.view">
+        <field name="name">data_sanitizer_form</field>
+        <field name="model">data.sanitizer</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="model_id"/>
+                            <field name="field_id"/>
+                        </group>
+                        <group>
+                            <field name="strip" widget="boolean_toggler"/>
+                            <field name="transform" widget="selection_badge"/>
+                            <field name="default_value"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Mapping">
+                            <field name="mapping_ids">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="value"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

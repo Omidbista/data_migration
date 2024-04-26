@@ -1,0 +1,21 @@
+div [name="barcode_preview"], div [name="barcode_preview_serial"], {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+
+#barcode_preview {
+  display: flex;
+  justify-content: center;
+
+  img {
+    border: 10px solid lightgray !important;
+    min-width: 80%;
+    width: 80%;
+    max-width: 80%;
+    padding: 0
+  }
+}
