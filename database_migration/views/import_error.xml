@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="import_error_view_form" model="ir.ui.view">
+        <field name="name">import_error_view_form</field>
+        <field name="model">import.error</field>
+        <field name="arch" type="xml">
+            <form string="import_error_form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="import_error_view_tree" model="ir.ui.view">
+        <field name="name">import_error_view_tree</field>
+        <field name="model">import.error</field>
+        <field name="arch" type="xml">
+            <tree string="import_error_tree">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="import_error_action" model="ir.actions.act_window">
+        <field name="name">Import Error Types</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">import.error</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_import_error"
+              name="Error Types"
+              parent="menu_import_configuration"
+              action="import_error_action"
+              sequence="1"/>
+</odoo>

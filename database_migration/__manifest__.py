@@ -12,9 +12,12 @@
     'depends': ['base', 'product', 'sale'],
     'data': [
         'security/ir.model.access.csv',
+        'data/import_error.xml',
         'views/import_data.xml',
         'views/import_data_field.xml',
-        'views/data_sanitizer.xml'
+        'views/data_sanitizer.xml',
+        'views/configuration.xml',
+        'views/import_error.xml'
     ],
     'demo': [
     ],

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="import_error_required" model="import.error">
+        <field name="name">Missing Required</field>
+        <field name="code">required</field>
+        <field name="description">Value cannot be empty</field>
+    </record>
+
+    <record id="import_error_missing" model="import.error">
+        <field name="name">Missing Record</field>
+        <field name="code">relation</field>
+        <field name="description">Record does not exists in the table</field>
+    </record>
+
+    <record id="import_invalid_format" model="import.error">
+        <field name="name">Invalid Format</field>
+        <field name="code">format</field>
+        <field name="description">The input format does not match with the value type</field>
+    </record>
+
+
+</odoo>

@@ -1,4 +1,13 @@
 .o_import_list_view {
+  .oe_progress {
+    width: 0;
+    height: 15px;
+    background: #2c8397;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
 
   th {
 
@@ -8,6 +17,7 @@
         display: block;
       }
     }
+
     .fa-cog {
       position: relative;;
       float: right;

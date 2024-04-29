@@ -11,6 +11,8 @@
                     <button type="object" states="config_fields" name="validate" string="Validate"
                             class="oe_highlight"/>
                      <button type="object" states="config_fields" name="import_fields" string="Reimport Fields"/>
+                    <button type="object" name="update_rec" string="update_rec"/>
+                    <button type="object" name="reset" string="Reset"/>
                     <field name="state" widget="statusbar"/>
                 </header>
                 <sheet>
@@ -76,7 +78,7 @@
         <field name="name">Import Data</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">import.data</field>
-        <field name="view_mode">import_list_view,form</field>
+        <field name="view_mode">tree,form</field>
     </record>
 
     <!-- This Menu Item must have a parent and an action -->

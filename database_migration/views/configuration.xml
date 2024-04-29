@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <menuitem id="menu_import_configuration"
+              name="Configuration"
+              parent="data_migration_root"
+              sequence="1000"/>
+</odoo>

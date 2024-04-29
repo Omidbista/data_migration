@@ -8,12 +8,10 @@ const { Component, onWillStart, onWillUpdateProps} = owl;
 export class MigrationHelper extends Component {
     setup() {
         super.setup();
-        console.log("Component Setup", this)
         onWillStart(this.onWillStart);
         onWillUpdateProps(this.onWillUpdateProps)
     }
     async onWillUpdateProps() {
-        console.log("Updated")
     }
     async onWillStart() {
         console.log("Will start Component")
